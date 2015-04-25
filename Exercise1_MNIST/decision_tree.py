@@ -53,7 +53,7 @@ def dt_baseline():
 
     """
     param_grid = {
-                   'criterion' : ['entropy'],
+                   'criterion' : ['entropy', 'gini'],
                    'max_depth' : [10, 50, 70, 100],
                    'max_features' : [50, 100, 250, 500]
                   }
