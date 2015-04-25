@@ -22,7 +22,7 @@ def pixelPlot(clf, filename):
     plt.savefig('./' + filename + '.png' )
     print "pixel importance plotted"
 
-def dt_baseline():
+def rf_baseline():
     training_data, training_labels = mnist.load_mnist('training', path=DIR_PATH, selection=slice(0, 60000))
     test_data, test_labels = mnist.load_mnist('testing', path=DIR_PATH, selection=slice(0, 10000))
     #mnist.show(training_data[0])
@@ -72,4 +72,4 @@ def dt_baseline():
     pixelPlot(classifier, filename="forestPixels")
 
 if __name__ == "__main__":
-    dt_baseline()
+    rf_baseline()
