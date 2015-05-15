@@ -20,7 +20,6 @@ test_labels_part = test_labels(1:2000, :);
 % checking for optimal number of iterations
 %{
 rounds = [100, 250, 500, 750, 1000];
-%rounds = [5, 10];
 complete_prediction = [];
 matched_labels = [];
 
@@ -55,12 +54,12 @@ complete_prediction = complete_prediction.';
 display(complete_prediction)
 %}
 
-rounds = 2;
+rounds = 500;
 complete_prediction = [];
 matched_labels = [];
 disp(rounds);
 % Training
-model = trainadaboost(images_part, labels_part, 10, rounds);
+model = trainadaboost(images, labels, 10, rounds);
 % Testing
 disp('Testing.....');
 labels_predicted = zeros;
